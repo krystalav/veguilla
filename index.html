@@ -3,10 +3,137 @@
      <head> 
           <meta charset="utf-8"> 
           <title>Krystal Alexandra Veguilla</title> 
+          <style>
+               * {
+                    margin: 0;
+                    padding: 0;
+               }
+               
+               body {
+                    background: linear-gradient(135deg, #ffc0cb 0%, #ffb6d9 50%, #ffc0cb 100%);
+                    font-family: Arial, sans-serif;
+                    min-height: 100vh;
+                    position: relative;
+                    overflow-x: hidden;
+               }
+               
+               /* Glitter background animation */
+               @keyframes glitter {
+                    0%, 100% { opacity: 0.3; transform: scale(1) rotate(0deg); }
+                    50% { opacity: 1; transform: scale(1.2) rotate(180deg); }
+               }
+               
+               body::before {
+                    content: '';
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-image: 
+                         radial-gradient(2px 2px at 20px 30px, #ffccdd, rgba(0,0,0,0)),
+                         radial-gradient(2px 2px at 60px 70px, #ffddee, rgba(0,0,0,0)),
+                         radial-gradient(1px 1px at 50px 50px, #ffeeff, rgba(0,0,0,0)),
+                         radial-gradient(1px 1px at 130px 80px, #ffccdd, rgba(0,0,0,0)),
+                         radial-gradient(2px 2px at 90px 10px, #ffddee, rgba(0,0,0,0));
+                    background-repeat: repeat;
+                    background-size: 200px 200px;
+                    animation: glitter 3s infinite;
+                    pointer-events: none;
+                    z-index: 1;
+               }
+               
+               header {
+                    background: linear-gradient(135deg, #ffb6d9 0%, #ffc0cb 50%, #ffddee 100%);
+                    padding: 40px 20px;
+                    text-align: center;
+                    box-shadow: 0 8px 20px rgba(255, 105, 180, 0.4);
+                    position: relative;
+                    z-index: 2;
+               }
+               
+               h1 {
+                    color: #ff69b4;
+                    font-size: 3em;
+                    text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.5),
+                                 0 0 20px rgba(255, 192, 203, 0.8);
+                    letter-spacing: 2px;
+                    font-weight: bold;
+               }
+               
+               /* Rose decorations */
+               .rose {
+                    display: inline-block;
+                    font-size: 2.5em;
+                    margin: 0 10px;
+                    animation: float 3s ease-in-out infinite;
+               }
+               
+               @keyframes float {
+                    0%, 100% { transform: translateY(0px); }
+                    50% { transform: translateY(-10px); }
+               }
+               
+               .rose:nth-child(odd) {
+                    animation-delay: 0s;
+               }
+               
+               .rose:nth-child(even) {
+                    animation-delay: 0.5s;
+               }
+               
+               /* Scattered roses */
+               .rose-scatter {
+                    position: fixed;
+                    font-size: 3em;
+                    opacity: 0.6;
+                    pointer-events: none;
+                    z-index: 0;
+               }
+               
+               .rose-1 { top: 10%; left: 5%; animation: float 4s ease-in-out infinite; }
+               .rose-2 { top: 30%; right: 8%; animation: float 4.5s ease-in-out infinite; animation-delay: 0.5s; }
+               .rose-3 { top: 50%; left: 10%; animation: float 5s ease-in-out infinite; animation-delay: 1s; }
+               .rose-4 { bottom: 20%; right: 10%; animation: float 4.2s ease-in-out infinite; animation-delay: 1.5s; }
+               .rose-5 { top: 60%; right: 15%; animation: float 5.5s ease-in-out infinite; animation-delay: 0.3s; }
+               .rose-6 { bottom: 30%; left: 8%; animation: float 4.8s ease-in-out infinite; animation-delay: 1.2s; }
+               
+               main {
+                    padding: 40px;
+                    max-width: 900px;
+                    margin: 0 auto;
+                    position: relative;
+                    z-index: 2;
+                    background: rgba(255, 255, 255, 0.7);
+                    border-radius: 20px;
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                    box-shadow: 0 8px 30px rgba(255, 192, 203, 0.3);
+               }
+               
+               p {
+                    color: #b84c7d;
+                    font-size: 1.1em;
+                    line-height: 1.8;
+               }
+          </style>
      </head> 
      <body> 
-          <h1>ABOUT ME</h1> 
-               <p>Hi my name is Krystal Alexandra Veguilla. I’m from Indianapolis, Indiana. I went to Cathedral High School. I’m currently a Political Science and Sociology major, and eventually I want to add a Criminology and Criminal Justice minor. But I am on a pre-law track to become either a family or immigration lawyer. My favorite color is pink, like almost everything I own is pink. Some of my hobbies include cooking, baking, reading, and watching tv. Here at IU, I really want to join a multicultural sorority and the Puerto Rican Student Organization Club. Some other clubs I would join are associated with La Casa Cultural House here on campus. I am very proud of being half Puerto Rican and half Peruvian, so I’m really excited to find my community of fellow Latinos.  I love animals and helping people. I would say my favorite animal though are pandas. For reading and writing, I love reading as a hobby and I also love writing when it’s my free time. I really enjoy romance and fantasy books. So, for class sometimes it’s a little harder, but I still very much enjoy it. Anything English or Social Studies has always been my favorite subject growing up./p> 
+          <div class="rose-scatter rose-1">🌹</div>
+          <div class="rose-scatter rose-2">🌹</div>
+          <div class="rose-scatter rose-3">🌹</div>
+          <div class="rose-scatter rose-4">🌹</div>
+          <div class="rose-scatter rose-5">🌹</div>
+          <div class="rose-scatter rose-6">🌹</div>
+          
+          <header>
+               <span class="rose">🌹</span>
+               <h1>ABOUT ME</h1>
+               <span class="rose">🌹</span>
+          </header>
+          
+          <main>
+               <p>Hi my name is Krystal Alexandra Veguilla. I'm from Indianapolis, Indiana. I went to Cathedral High School. I'm currently a Political Science and Sociology major, and eventually I plan to go to law school to study international human rights law.</p>
+          </main>
      </body> 
-</html> 
-
+</html>
